@@ -1,0 +1,23 @@
+filebeat:
+  prospectors:
+    -
+      paths:
+        - "/var/log/apache2/*.log"
+      encoding: utf-8
+      input_type: log
+      document_type: apache
+output:
+  logstash:
+    hosts: ["127.0.0.1:5044"]
+    index: gltb-demo
+  shipper:
+    name: gltb-demo
+    tags: ["gltb","demo"]
+  logging:
+    level: warning
+    to_files: true
+    to_syslog: false
+    files:
+      path: /var/log/beats
+      name: filebeat.log
+      keepfiles: 7

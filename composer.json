@@ -1,0 +1,13 @@
+{
+    "name": "matt/php",
+    "authors": [
+        {
+            "name": "Matt Cockayne",
+            "email": "matt@mattcockayne.uk"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.21",
+        "graylog2/gelf-php": "^1.5"
+    }
+}
